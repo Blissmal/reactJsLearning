@@ -34,14 +34,14 @@ const MyComponent = () => {
     const handleRemoveCar = (index) => {
 
     }
-    const YearChange = (index) => {
-
+    const YearChange = (e) => {
+        setCarYear(e.target.value)
     }
-    const MakeChange = (index) => {
-
+    const MakeChange = (e) => {
+        setCarMake(e.target.value)
     }
-    const ModelChange = (index) => {
-
+    const ModelChange = (e) => {
+        setCarModel(e.target.value)
     }
 
     return (
@@ -57,6 +57,14 @@ const MyComponent = () => {
                 </ul>
                 <input type="text" id="foodInput" />
                 <button onClick={handleAddFood}>Add Food</button>
+            </div>
+            <div>
+                <h2>List of car objects</h2>
+                <ul></ul>
+                <input type="number" value={carYear} onChange={YearChange}/><br />
+                <input type="text" value={carMake} onChange={MakeChange}/><br />
+                <input type="number" value={carModel} onChange={ModelChange}/><br />
+                <button onClick={handleAddCar}>Add Car</button>
             </div>
         </div>
     )
