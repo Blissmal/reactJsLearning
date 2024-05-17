@@ -63,7 +63,7 @@ const MyComponent = () => {
                 <ul></ul>
                 <input type="number" value={carYear} onChange={YearChange}/><br />
                 <input type="text" value={carMake} onChange={MakeChange}/><br />
-                <input type="number" value={carModel} onChange={ModelChange}/><br />
+                <input type="text" value={carModel} onChange={ModelChange}/><br />
                 <button onClick={handleAddCar}>Add Car</button>
             </div>
         </div>
