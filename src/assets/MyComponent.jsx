@@ -21,7 +21,7 @@ const MyComponent = () => {
         document.getElementById("foodInput").value = ""
     }
     const handleRemoveFood = (index) => {
-        setFood(foods.filter((_, i) => i!== index))
+        setFood(foods.filter((_, i) => i !== index))
     }
     const [cars, setCars] = useState([])
     const [carYear, setCarYear] = useState(new Date().getFullYear())
@@ -29,7 +29,8 @@ const MyComponent = () => {
     const [carModel, setCarModel] = useState("")
 
     const handleAddCar = () => {
-        
+        const newCar = { year: carYear, make: carMake, model: carModel }
+
     }
     const handleRemoveCar = (index) => {
 
@@ -61,9 +62,9 @@ const MyComponent = () => {
             <div>
                 <h2>List of car objects</h2>
                 <ul></ul>
-                <input type="number" value={carYear} onChange={YearChange}/><br />
-                <input type="text" value={carMake} onChange={MakeChange}/><br />
-                <input type="text" value={carModel} onChange={ModelChange}/><br />
+                <input type="number" value={carYear} onChange={YearChange} /><br />
+                <input type="text" value={carMake} onChange={MakeChange} /><br />
+                <input type="text" value={carModel} onChange={ModelChange} /><br />
                 <button onClick={handleAddCar}>Add Car</button>
             </div>
         </div>
