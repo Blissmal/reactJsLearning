@@ -8,10 +8,13 @@ const ToDoList = () => {
         setNewTask(e.target.value)
     }
     const addTask = () => {
-
+        if (newTask.trim() !== "") {
+            setTasks(t => [...t, newTask])
+            setNewTask("")
+        }
     }
     const deleteTask = (index) => {
-
+        setTasks(tasks.filter((_, i) => i !== index))
     }
     const moveTaskUp = (index) => {
 
