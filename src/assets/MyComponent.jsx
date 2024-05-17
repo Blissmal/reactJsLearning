@@ -27,7 +27,22 @@ const MyComponent = () => {
     const [carYear, setCarYear] = useState(new Date().getFullYear())
     const [carMake, setCarMake] = useState("")
     const [carModel, setCarModel] = useState("")
-    
+
+    const handleAddCar = () => {
+        
+    }
+    const handleRemoveCar = (index) => {
+
+    }
+    const YearChange = (index) => {
+
+    }
+    const MakeChange = (index) => {
+
+    }
+    const ModelChange = (index) => {
+
+    }
 
     return (
         <div>
