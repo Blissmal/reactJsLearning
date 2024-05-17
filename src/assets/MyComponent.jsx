@@ -30,7 +30,7 @@ const MyComponent = () => {
 
     const handleAddCar = () => {
         const newCar = { year: carYear, make: carMake, model: carModel }
-        setCar(c => [...c, newCar])
+        setCars(c => [...c, newCar])
 
     }
     const handleRemoveCar = (index) => {
@@ -63,7 +63,7 @@ const MyComponent = () => {
             <div>
                 <h2>List of car objects</h2>
                 <ul>
-                    {cars.map((car, index) => <li key={index}>{car.year} {car.make} {car.Model}</li>)}
+                    {cars.map((car, index) => <li key={index}>{car.year} {car.make} {car.model}</li>)}
                 </ul>
                 <input type="number" value={carYear} onChange={YearChange} /><br />
                 <input type="text" value={carMake} onChange={MakeChange} /><br />
