@@ -2,6 +2,12 @@ import React, { useState } from "react";
 
 const MyComponent = () => {
     const [car, setCar] = useState({ year: 2024, make: "Ford", model: "Mustang" })
+    const [foods, setFood] = useState(["apple", "Orange", "Banana"])
+
+    const [cars, setCars] = useState([])
+    const [carYear, setCarYear] = useState(new Date().getFullYear())
+    const [carMake, setCarMake] = useState("")
+    const [carModel, setCarModel] = useState("")
 
     const handleYearChange = (e) => {
         setCar(c => ({ ...c, year: e.target.value }))
@@ -13,7 +19,6 @@ const MyComponent = () => {
         setCar(c => ({ ...c, model: e.target.value }))
     }
 
-    const [foods, setFood] = useState(["apple", "Orange", "Banana"])
 
     const handleAddFood = () => {
         const newFood = document.getElementById("foodInput").value
@@ -23,10 +28,7 @@ const MyComponent = () => {
     const handleRemoveFood = (index) => {
         setFood(foods.filter((_, i) => i !== index))
     }
-    const [cars, setCars] = useState([])
-    const [carYear, setCarYear] = useState(new Date().getFullYear())
-    const [carMake, setCarMake] = useState("")
-    const [carModel, setCarModel] = useState("")
+
 
     const handleAddCar = () => {
         const newCar = { year: carYear, make: carMake, model: carModel }
@@ -37,7 +39,7 @@ const MyComponent = () => {
 
     }
     const handleRemoveCar = (index) => {
-       setCars(c => c.filter((_, i) => i !== index))
+        setCars(c => c.filter((_, i) => i !== index))
     }
     const YearChange = (e) => {
         setCarYear(e.target.value)
