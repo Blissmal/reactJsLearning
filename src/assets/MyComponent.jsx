@@ -23,6 +23,11 @@ const MyComponent = () => {
     const handleRemoveFood = (index) => {
         setFood(foods.filter((_, i) => i!== index))
     }
+    const [cars, setCars] = useState([])
+    const [carYear, setCarYear] = useState(new Date().getFullYear())
+    const [carMake, setCarMake] = useState("")
+    const [carModel, setCarModel] = useState("")
+    
 
     return (
         <div>
