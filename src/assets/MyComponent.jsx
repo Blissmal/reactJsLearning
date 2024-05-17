@@ -31,10 +31,13 @@ const MyComponent = () => {
     const handleAddCar = () => {
         const newCar = { year: carYear, make: carMake, model: carModel }
         setCars(c => [...c, newCar])
+        setCarYear(new Date().getFullYear())
+        setCarMake("")
+        setCarModel("")
 
     }
     const handleRemoveCar = (index) => {
-
+       setCars(c => c.filter((_, i) => i !== index))
     }
     const YearChange = (e) => {
         setCarYear(e.target.value)
@@ -63,7 +66,7 @@ const MyComponent = () => {
             <div>
                 <h2>List of car objects</h2>
                 <ul>
-                    {cars.map((car, index) => <li key={index}>{car.year} {car.make} {car.model}</li>)}
+                    {cars.map((car, index) => <li onClick={() => handleRemoveCar(index)} key={index}>{car.year} {car.make} {car.model}</li>)}
                 </ul>
                 <input type="number" value={carYear} onChange={YearChange} /><br />
                 <input type="text" value={carMake} onChange={MakeChange} /><br />
