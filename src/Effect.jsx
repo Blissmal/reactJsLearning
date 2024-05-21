@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 function Effect(){
 
-    const [count, setCount] = useState()
+    const [count, setCount] = useState(0)
 
     const addCount = () => {
         setCount(c => c + 1)
