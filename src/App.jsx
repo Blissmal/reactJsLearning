@@ -3,6 +3,7 @@ import Card from "./Card";
 import Counter from "./Counter";
 import MyComponent from "./assets/MyComponent";
 import ToDoList from "./ToDoList";
+import Effect from "./Effect";
 
 function App() {
   return (
@@ -10,8 +11,9 @@ function App() {
       {/* <Student name="Spongebob" age={30}/>
       <Card />
       <Counter />
-      <MyComponent /> */}
-      <ToDoList />
+      <MyComponent />
+      <ToDoList /> */}
+      <Effect />
     </>
   );
 }

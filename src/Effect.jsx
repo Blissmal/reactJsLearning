@@ -8,7 +8,7 @@ function Effect(){
         setCount(c => c + 1)
     }
     useEffect(() => {
-        document.title(`count ${count}`)
+        document.title = `count: ${count}`
     }, [count])
 
     return(
