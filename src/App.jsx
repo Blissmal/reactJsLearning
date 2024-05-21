@@ -1,9 +1,10 @@
 import Student from "./Student";
 import Card from "./Card";
 import Counter from "./Counter";
-import MyComponent from "./assets/MyComponent";
+import MyComponent from "./MyComponent";
 import ToDoList from "./ToDoList";
 import Effect from "./Effect";
+import DigitalClock from "./DigitalClock";
 
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
       <Card />
       <Counter />
       <MyComponent />
-      <ToDoList /> */}
-      <Effect />
+      <ToDoList />
+      <Effect /> */}
+      <DigitalClock />
     </>
   );
 }
